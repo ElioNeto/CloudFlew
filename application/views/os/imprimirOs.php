@@ -3,7 +3,7 @@ $totalProdutos = 0;?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>Map OS</title>
+<title>Cloud Flew</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
@@ -38,7 +38,7 @@ $totalProdutos = 0;?>
                             <tr>
                                 <td style="width: 25%"><img src=" <?php echo $emitente[0]->url_logo; ?> " style="max-height: 100px"></td>
                                 <td> <span style="font-size: 20px; "> <?php echo $emitente[0]->nome; ?></span> </br><span><?php echo $emitente[0]->cnpj; ?> </br> <?php echo $emitente[0]->rua.', '.$emitente[0]->numero.' - '.$emitente[0]->bairro.' - '.$emitente[0]->cidade.' - '.$emitente[0]->uf; ?> </span> </br> <span> E-mail: <?php echo $emitente[0]->email.' - Fone: '.$emitente[0]->telefone; ?></span></td>
-                                <td style="width: 18%; text-align: center"><b>#PROTOCOLO:</b> <span ><?php echo $result->idOs?></span></br> </br> <span>Emissão: <?php echo date('d/m/Y')?></span></td>
+                                <td style="width: 18%; text-align: center"><b>#ORDEM:</b> <span ><?php echo $result->idOs?></span></br> </br> <span>Emissão: <?php echo date('d/m/Y')?></span></td>
                             </tr>
 
                             <?php } ?>
@@ -54,23 +54,23 @@ $totalProdutos = 0;?>
                                         <li>
                                             <span><h5><b>CLIENTE</b></h5>
                                             <span><?php echo $result->nomeCliente?></span><br/>
-                                            <span><?php echo $result->rua?>, <?php echo $result->numero?>, <?php echo $result->bairro?></span>, 
-                                            <span><?php echo $result->cidade?> - <?php echo $result->estado?></span><br>
-                                            <span>E-mail: <?php echo $result->email?></span><br>
-                                            <span>Celular: <?php echo $result->celular?></span>
+                                            <!--<span><?php //echo $result->rua?>, <?php //echo $result->numero?>, <?php //echo $result->bairro?></span>, 
+                                            <span><?php //echo $result->cidade?> - <?php //echo $result->estado?></span><br>-->
+                                            <span>E-mail: <?php echo $result->email?></span>
+                                            <span> Celular: <?php echo $result->celular?></span>
                                         </li>
                                     </ul>
                                 </td>
-                                <td style="width: 50%; padding-left: 0">
+                                <!--<td style="width: 50%; padding-left: 0">
                                     <ul>
                                         <li>
                                             <span><h5><b>RESPONSÁVEL</b></h5></span>
-                                            <span><?php echo $result->nome?></span> <br/>
-                                            <span>Telefone: <?php echo $result->telefone?></span><br/>
-                                            <span>Email: <?php echo $result->email_responsavel ?></span>
+                                            <span><?php //echo $result->nome?></span> <br/>
+                                            <span>Telefone: <?php //echo $result->telefone?></span><br/>
+                                            <span>Email: <?php //echo $result->email_responsavel ?></span>
                                         </li>
                                     </ul>
-                                </td>
+                                </td>-->
                             </tr>
                         </tbody>
                     </table> 
@@ -96,8 +96,9 @@ $totalProdutos = 0;?>
                                 </td>
 
                                 <td>
-                                <b>GARANTIA: </b>
-                                <?php echo $result->garantia; ?>
+                                <b>Funcionamento: </b>
+                                <?php //echo $result->idOs; ?>
+                                8:30 às 12 horas e das 14 horas às 18:30 - Segunda - Sexta 
                                 </td>
 
                             </tr>
@@ -200,10 +201,19 @@ $totalProdutos = 0;?>
                                     </tbody>
                                 </table>
                         <?php }?>
-                        <h4 style="text-align: right">Valor Total: R$ <?php echo number_format($totalProdutos + $totalServico, 2, ',', '.');?></h4>
+                        <!--<h4 style="text-align: right">Valor Total: R$ <?php //echo number_format($totalProdutos + $totalServico, 2, ',', '.');?></h4> -->
 
                         <table class="table table-bordered table-condensed">                                      
                             <tbody>
+                                    <tr>
+                                        <td colspan="3"><b>Validade do Orçamento</b><br>10 (Dez) dias contadosda data da emissão desta ordem de conserto.
+                                        <br><b>Termo de Garantia</b><br>Este conserto tem garantia de 90 dias, contados da data de execução do conserto, 
+                                        válido apenas para o defeito constatado por este postoe abrange todas as peças substituídas. O aparelho consertado 
+                                        foi devidamente lacrado e sua violação implica em perda de garantia.
+                                        <br><b>Prazo para Retirada</b><br>O aparelho deverá ser retirado no prazo máximo de DEZ dias, contados da data de 
+                                        entrega. Após esse prazo o valor total será corrigido monetariamente e acrescido de taxa correspondente a despesas 
+                                        de armazenamento, até o prazo de 12 meses, após os quais o produto será desmontado ou vendido.</td>
+                                    </tr>
                                     <tr> 
                                         <td>Data <hr></td>
                                         <td>Assinatura do Cliente <hr></td>

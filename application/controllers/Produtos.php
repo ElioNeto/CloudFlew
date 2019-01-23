@@ -101,7 +101,7 @@ class Produtos extends CI_Controller
 
             if ($this->produtos_model->add('produtos', $data) == true) {
                 $this->session->set_flashdata('success', 'Produto adicionado com sucesso!');
-                redirect('index.php/produtos/adicionar/');
+                redirect('/produtos/adicionar/');
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>An Error Occured.</p></div>';
             }
@@ -198,7 +198,7 @@ class Produtos extends CI_Controller
         if ($id == null) {
 
             $this->session->set_flashdata('error', 'Erro ao tentar excluir produto.');
-            redirect('index.php/produtos/gerenciar/');
+            redirect('/produtos/gerenciar/');
         }
 
         $this->db->where('produtos_id', $id);
@@ -212,6 +212,6 @@ class Produtos extends CI_Controller
         
 
         $this->session->set_flashdata('success', 'Produto excluido com sucesso!');
-        redirect('index.php/produtos/gerenciar/');
+        redirect('/produtos/gerenciar/');
     }
 }

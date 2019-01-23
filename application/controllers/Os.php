@@ -240,7 +240,7 @@ class Os extends CI_Controller
 
             if ($this->os_model->edit('os', $data, 'idOs', $this->input->post('idOs')) == true) {
                 $this->session->set_flashdata('success', 'Os editada com sucesso!');
-                redirect('index.php/os/editar/'.$this->input->post('idOs'));
+                redirect('/os/editar/'.$this->input->post('idOs'));
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um erro</p></div>';
             }
@@ -298,7 +298,7 @@ class Os extends CI_Controller
                 $this->data['result'] = $this->os_model->getById($this->uri->segment(3));
                 $this->data['produtos'] = $this->os_model->getProdutos($this->uri->segment(3));
                 $this->data['servicos'] = $this->os_model->getServicos($this->uri->segment(3));
-                $this->data['emitente'] = $this->mapos_model->getEmitente();
+                $this->data['emitente'] = $this->mapos_model->getEmitente(); 
         
                 $this->load->view('os/imprimirOs', $this->data);
                

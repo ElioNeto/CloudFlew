@@ -143,7 +143,7 @@ class Arquivos extends CI_Controller
 
             if ($this->arquivos_model->add('documentos', $data) == true) {
                 $this->session->set_flashdata('success', 'Arquivo adicionado com sucesso!');
-                redirect('index.php/arquivos/adicionar/');
+                redirect('/arquivos/adicionar/');
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um erro.</p></div>';
             }
@@ -191,7 +191,7 @@ class Arquivos extends CI_Controller
 
             if ($this->arquivos_model->edit('documentos', $data, 'idDocumentos', $this->input->post('idDocumentos')) == true) {
                 $this->session->set_flashdata('success', 'Alterações efetuadas com sucesso!');
-                redirect('index.php/arquivos/editar/'.$this->input->post('idDocumentos'));
+                redirect('/arquivos/editar/'.$this->input->post('idDocumentos'));
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um erro.</p></div>';
             }
@@ -215,7 +215,7 @@ class Arquivos extends CI_Controller
 
         if ($id == null || !is_numeric($id)) {
             $this->session->set_flashdata('error', 'Erro! O arquivo não pode ser localizado.');
-            redirect('index.php/arquivos/');
+            redirect('/arquivos');
         }
 
         $file = $this->arquivos_model->getById($id);
@@ -240,7 +240,7 @@ class Arquivos extends CI_Controller
         $id = $this->input->post('id');
         if ($id == null || !is_numeric($id)) {
             $this->session->set_flashdata('error', 'Erro! O arquivo não pode ser localizado.');
-            redirect('index.php/arquivos/');
+            redirect('/arquivos');
         }
 
         $file = $this->arquivos_model->getById($id);
@@ -253,7 +253,7 @@ class Arquivos extends CI_Controller
             unlink($path);
 
             $this->session->set_flashdata('success', 'Arquivo excluido com sucesso!');
-            redirect( 'index.php/arquivos/');
+            redirect( 'arquivos');
         } else {
 
             $this->session->set_flashdata('error', 'Ocorreu um erro ao tentar excluir o arquivo.');

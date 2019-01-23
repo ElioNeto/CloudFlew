@@ -95,7 +95,7 @@ class Servicos extends CI_Controller
 
             if ($this->servicos_model->add('servicos', $data) == true) {
                 $this->session->set_flashdata('success', 'Serviço adicionado com sucesso!');
-                redirect('index.php/servicos/adicionar/');
+                redirect('/servicos/adicionar/');
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um erro.</p></div>';
             }
@@ -127,7 +127,7 @@ class Servicos extends CI_Controller
 
             if ($this->servicos_model->edit('servicos', $data, 'idServicos', $this->input->post('idServicos')) == true) {
                 $this->session->set_flashdata('success', 'Serviço editado com sucesso!');
-                redirect('index.php/servicos/editar/'.$this->input->post('idServicos'));
+                redirect('/servicos/editar/'.$this->input->post('idServicos'));
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um errro.</p></div>';
             }
@@ -163,6 +163,6 @@ class Servicos extends CI_Controller
         
 
         $this->session->set_flashdata('success', 'Serviço excluido com sucesso!');
-        redirect('index.php/servicos/gerenciar/');
+        redirect('/servicos/gerenciar/');
     }
 }

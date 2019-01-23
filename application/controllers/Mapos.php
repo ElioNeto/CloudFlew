@@ -319,7 +319,7 @@ class Mapos extends CI_Controller
         if ($this->form_validation->run() == false) {
 
             $this->session->set_flashdata('error', 'Campos obrigatórios não foram preenchidos.');
-            redirect('index.php/mapos/emitente');
+            redirect('/mapos/emitente');
 
         } else {
 
