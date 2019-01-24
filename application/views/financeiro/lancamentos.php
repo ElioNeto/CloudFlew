@@ -216,7 +216,7 @@ if (!$results) {?>
   <form id="formReceita" action="<?php echo base_url() ?>index.php/financeiro/adicionarReceita" method="post">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">MapOS - Adicionar Receita</h3>
+    <h3 id="myModalLabel">Cloud Flew - Adicionar Receita</h3>
   </div>
   <div class="modal-body">
   		
@@ -287,7 +287,7 @@ if (!$results) {?>
   <form id="formDespesa" action="<?php echo base_url() ?>index.php/financeiro/adicionarDespesa" method="post">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">MapOS - Adicionar Despesa</h3>
+    <h3 id="myModalLabel">Cloud Flew - Adicionar Despesa</h3>
   </div>
   <div class="modal-body">
   		<div class="span12 alert alert-info" style="margin-left: 0"> Obrigatório o preenchimento dos campos com asterisco.</div>
@@ -357,7 +357,7 @@ if (!$results) {?>
   <form id="formEditar" action="<?php echo base_url() ?>index.php/financeiro/editar" method="post">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">MapOS - Editar Lançamento</h3>
+    <h3 id="myModalLabel">Cloud Flew - Editar Lançamento</h3>
   </div>
   <div class="modal-body">
       <div class="span12 alert alert-info" style="margin-left: 0"> Obrigatório o preenchimento dos campos com asterisco.</div>
@@ -437,7 +437,7 @@ if (!$results) {?>
 <div id="modalExcluir" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">MapOS - Excluir Lançamento</h3>
+    <h3 id="myModalLabel">Cloud Flew - Excluir Lançamento</h3>
   </div>
   <div class="modal-body">
     <h5 style="text-align: center">Deseja realmente excluir esse lançamento?</h5>

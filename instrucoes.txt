@@ -47,10 +47,5 @@ Instalando o sistema manualmente
 O logotipo se encontra dentro da pasta assets/img. Caso queira trocá-lo, basta substituir pelo logo desejado com o mesmo nome (logo.png). 
 
 
-----------------------------------------
-@RamonSilva20 - silva018-mg@yahoo.com.br
-----------------------------------------
-
-
 
 

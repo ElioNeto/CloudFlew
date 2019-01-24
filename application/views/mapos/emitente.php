@@ -24,7 +24,7 @@
   <form action="<?php echo base_url(); ?>index.php/mapos/cadastrarEmitente" id="formCadastrar" enctype="multipart/form-data" method="post" class="form-horizontal" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">MapOS - Cadastrar Dados do Emitente</h3>
+    <h3 id="myModalLabel">Cloud Flew - Cadastrar Dados do Emitente</h3>
   </div>
   <div class="modal-body">
         
@@ -142,7 +142,7 @@
   <form action="<?php echo base_url(); ?>index.php/mapos/editarEmitente" id="formAlterar" enctype="multipart/form-data" method="post" class="form-horizontal" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="">MapOS - Editar Dados do Emitente</h3>
+    <h3 id="">Cloud Flew - Editar Dados do Emitente</h3>
   </div>
   <div class="modal-body">
         
@@ -225,7 +225,7 @@
   <form action="<?php echo base_url(); ?>index.php/mapos/editarLogo" id="formLogo" enctype="multipart/form-data" method="post" class="form-horizontal" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="">MapOS - Alterar Logotipo</h3>
+    <h3 id="">Cloud Flew - Alterar Logotipo</h3>
   </div>
   <div class="modal-body">
          <div class="span12 alert alert-info">Selecione uma nova imagem da logotipo. Tamanho indicado (130 X 130).</div>          

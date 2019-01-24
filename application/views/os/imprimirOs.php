@@ -61,16 +61,6 @@ $totalProdutos = 0;?>
                                         </li>
                                     </ul>
                                 </td>
-                                <!--<td style="width: 50%; padding-left: 0">
-                                    <ul>
-                                        <li>
-                                            <span><h5><b>RESPONSÁVEL</b></h5></span>
-                                            <span><?php //echo $result->nome?></span> <br/>
-                                            <span>Telefone: <?php //echo $result->telefone?></span><br/>
-                                            <span>Email: <?php //echo $result->email_responsavel ?></span>
-                                        </li>
-                                    </ul>
-                                </td>-->
                             </tr>
                         </tbody>
                     </table> 
@@ -201,7 +191,7 @@ $totalProdutos = 0;?>
                                     </tbody>
                                 </table>
                         <?php }?>
-                        <!--<h4 style="text-align: right">Valor Total: R$ <?php //echo number_format($totalProdutos + $totalServico, 2, ',', '.');?></h4> -->
+                        <h4 style="text-align: right">Valor Total: R$ <?php echo number_format($totalProdutos + $totalServico, 2, ',', '.');?></h4> 
 
                         <table class="table table-bordered table-condensed">                                      
                             <tbody>
