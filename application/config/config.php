@@ -28,7 +28,7 @@ $config['app_version'] = '1.1.2';
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '/CloudFlew';
+$config['base_url'] = '/';
 
 /*
 |--------------------------------------------------------------------------
