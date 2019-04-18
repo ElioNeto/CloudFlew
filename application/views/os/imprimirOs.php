@@ -144,11 +144,7 @@ $totalProdutos = 0;?>
                                         entrega. Após esse prazo o valor total será corrigido monetariamente e acrescido de taxa correspondente a despesas 
                                         de armazenamento, até o prazo de 12 meses, após os quais o produto será desmontado ou vendido.</small></td>
                                     </tr>
-                                    <tr> 
-                                        <td>Data <hr></td>
-                                        <td>Assinatura do Cliente <hr></td>
-                                        <td>Assinatura do Responsável <hr></td>
-                                    </tr>
+                                    
                             </tbody>
                         </table>
 
@@ -252,6 +248,12 @@ $totalProdutos = 0;?>
                                 </td>
                             </tr>
                             <?php }?>
+                            
+                            <tr> 
+                                        <td>Data <hr></td>
+                                        <td>Assinatura do Cliente <hr></td>
+                                        <td>Assinatura do Responsável <hr></td>
+                                    </tr>
                         </tbody>
                     </table>
 
