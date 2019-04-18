@@ -97,7 +97,7 @@ $totalProdutos = 0;?>
                             <?php if($result->descricaoProduto != null){?>
                             <tr>
                                 <td colspan="3">
-                                <b>DESCRIÇÃO: </b>
+                                <b>Produto: </b>
                                 <?php echo $result->descricaoProduto ?>
                                 </td>
                             </tr>
@@ -122,87 +122,27 @@ $totalProdutos = 0;?>
                             <?php }?>
 
                             <?php if($result->laudoTecnico != null){?>
-                            <tr>
+                            <!--<tr>
                                 <td colspan="3">
                                 <b>LAUDO TÉCNICO: </b>
-                                <?php echo $result->laudoTecnico?>
+                                <?php //echo $result->laudoTecnico?>
                                 </td>
-                            </tr>
+                            </tr>-->
                             <?php }?>
                         </tbody>
                     </table>
                     
-                    <?php if ($produtos != null) {?>
-                        <br />
-                        <table class="table table-bordered table-condensed" id="tblProdutos">
-                                    <thead>
-                                        <tr>
-                                            <th>Produto</th>
-                                            <th>Quantidade</th>
-                                            <th>Sub-total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        
-                                        foreach ($produtos as $p) {
-
-                                            $totalProdutos = $totalProdutos + $p->subTotal;
-                                            echo '<tr>';
-                                            echo '<td>'.$p->descricao.'</td>';
-                                            echo '<td>'.$p->quantidade.'</td>';
-                                            
-                                            echo '<td>R$ '.number_format($p->subTotal, 2, ',', '.').'</td>';
-                                            echo '</tr>';
-                                        }?>
-
-                                        <tr>
-                                            <td colspan="2" style="text-align: right"><strong>Total:</strong></td>
-                                            <td><strong>R$ <?php echo number_format($totalProdutos, 2, ',', '.');?></strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <?php }?>
-                        
-                                <?php if ($servicos != null) {?>
-                            <table class="table table-bordered table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Serviço</th>
-                                            <th>Sub-total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        setlocale(LC_MONETARY, 'en_US');
-                                        foreach ($servicos as $s) {
-                                            $preco = $s->preco;
-                                            $totalServico = $totalServico + $preco;
-                                            echo '<tr>';
-                                            echo '<td>'.$s->nome.'</td>';
-                                            echo '<td>R$ '.number_format($s->preco, 2, ',', '.').'</td>';
-                                            echo '</tr>';
-                                        }?>
-
-                                        <tr>
-                                            <td colspan="1" style="text-align: right"><strong>Total:</strong></td>
-                                            <td><strong>R$ <?php  echo number_format($totalServico, 2, ',', '.');?></strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                        <?php }?>
-                        <h4 style="text-align: right">Valor Total: R$ <?php echo number_format($totalProdutos + $totalServico, 2, ',', '.');?></h4> 
-
+                   
                         <table class="table table-bordered table-condensed">                                      
                             <tbody>
                                     <tr>
-                                        <td colspan="3"><b>Validade do Orçamento</b><br>10 (Dez) dias contadosda data da emissão desta ordem de conserto.
+                                        <td colspan="3"><small><b>Validade do Orçamento</b><br>10 (Dez) dias contadosda data da emissão desta ordem de conserto.
                                         <br><b>Termo de Garantia</b><br>Este conserto tem garantia de 90 dias, contados da data de execução do conserto, 
                                         válido apenas para o defeito constatado por este postoe abrange todas as peças substituídas. O aparelho consertado 
                                         foi devidamente lacrado e sua violação implica em perda de garantia.
                                         <br><b>Prazo para Retirada</b><br>O aparelho deverá ser retirado no prazo máximo de DEZ dias, contados da data de 
                                         entrega. Após esse prazo o valor total será corrigido monetariamente e acrescido de taxa correspondente a despesas 
-                                        de armazenamento, até o prazo de 12 meses, após os quais o produto será desmontado ou vendido.</td>
+                                        de armazenamento, até o prazo de 12 meses, após os quais o produto será desmontado ou vendido.</small></td>
                                     </tr>
                                     <tr> 
                                         <td>Data <hr></td>
