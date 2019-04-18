@@ -156,6 +156,109 @@ $totalProdutos = 0;?>
             </div>                
       </div>
     </div>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <div class="row-fluid">
+      <div class="span12">
+       
+        <div class="invoice-content">
+                <div class="invoice-head" style="margin-bottom: 0">
+
+                    <table class="table table-condensed" style="">
+                        <tbody>
+                            <?php if ($emitente == null) {?>
+                                        
+                            <tr>
+                                <td colspan="3" class="alert">Você precisa configurar os dados do emitente. >>><a href="<?php echo base_url(); ?>index.php/mapos/emitente">Configurar</a><<<</td>
+                            </tr>
+                            <?php } else {?>
+                            <tr>
+                               <td style="width: 18%; text-align: center"><b>#ORDEM:</b> <span ><?php echo $result->idOs?></span></td>
+                            </tr>
+
+                            <?php } ?>
+                        </tbody>
+                    </table>
+
+            
+                    <table class="table table-condensend">
+                        <tbody>
+                            <tr>
+                                <td style="width: 50%; padding-left: 0">
+                                    <ul>
+                                        <li>
+                                            <span><b>CLIENTE: </b>
+                                            <?php echo $result->nomeCliente?></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                </div>
+
+                <div style="margin-top: 0; padding-top: 0">
+                    
+
+                    <table class="table table-condensed">
+                        <tbody>
+                            
+                            <?php if($result->dataInicial != null){?>
+                            <tr>
+                                <td>
+                                <b>DATA INICIAL: </b>
+                                <?php echo date('d/m/Y', strtotime($result->dataInicial)); ?>
+                                </td>
+
+                                <td>
+                                <b>DATA FINAL: </b>
+                                <?php echo $result->dataFinal ? date('d/m/Y', strtotime($result->dataFinal)) : ''; ?>
+                                </td>
+                            </tr>
+                            <?php }?>
+
+                            <?php if($result->descricaoProduto != null){?>
+                            <tr>
+                                <td colspan="3">
+                                <b>Produto: </b>
+                                <?php echo $result->descricaoProduto ?>
+                                </td>
+                            </tr>
+                            <?php }?>
+            
+                            <?php if($result->defeito != null){?>
+                            <tr>
+                                <td colspan="3">
+                                <b>DEFEITO APRESENTADO: </b>
+                                <?php echo $result->defeito?>
+                                </td>
+                            </tr>
+                            <?php }?>
+                            
+                            <?php if($result->observacoes != null){?>
+                            <tr>
+                                <td colspan="3">
+                                <b>OBSERVAÇÕES: </b>
+                                <?php echo $result->observacoes?>
+                                </td>
+                            </tr>
+                            <?php }?>
+
+                            <?php if($result->laudoTecnico != null){?>
+                            <tr>
+                                <td colspan="3">
+                                <b>LAUDO TÉCNICO: </b>
+                                <?php echo $result->laudoTecnico?>
+                                </td>
+                            </tr>
+                            <?php }?>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>                
+      </div>
+    </div>
   </div>
 
 

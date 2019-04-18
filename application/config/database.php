@@ -7,11 +7,11 @@ $query_builder = true;
 
 $db['default'] = array(
     'dsn'   => '',
-    'hostname' => 'ec2-54-83-205-27.compute-1.amazonaws.com',
-    'username' => 'lkrdvyozqdyjgl',
-    'password' => 'c3aaa1e82a177c69c19286e1c706d26d7c879f9126606898da626d5501f4d4f2',
-    'database' => 'dqocd3l0ds04d',
-    'dbdriver' => 'postgre',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'CloudFlew',
+    'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => false,
     'db_debug' => (ENVIRONMENT !== 'production'),
